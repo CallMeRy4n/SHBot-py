@@ -1,4 +1,4 @@
-import urllib
+from urllib.parse import quote
 
 from . import http, dict, errors
 
@@ -44,7 +44,7 @@ def owoify(text: str):
     if text is None:
         raise errors.EmptyArgument("You have to enter a string you want to enter to API")
 
-    r = http.get("/owoify?text=" + urllib.parse.quote(text))
+    r = http.get("/owoify?text=" + quote(text))
     return r["owo"]
 
 def cat():
