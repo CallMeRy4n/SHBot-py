@@ -1,4 +1,4 @@
-import api.nekolife.nekos as nk
+import extensions.api.nekolife.nekos as nk
 import discord
 import datetime
 import pprint
